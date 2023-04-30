@@ -1,0 +1,27 @@
+body {
+	background-color: #FAF9F6;
+	font-family: 'Delius', sans-serif;
+}
+
+.bg-box {
+	background-color: rgba(168, 67, 0, 0.4);
+	padding: 30px;
+	border-radius: 0;
+}
+
+table {
+	margin-top: 20px;
+}
+
+th,h1 {
+	text-align: center;
+}
+
+td {
+	vertical-align: middle;
+}
+
+h2 {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
