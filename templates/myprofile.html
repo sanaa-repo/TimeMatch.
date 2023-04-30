@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title%}My Profile{% endblock %}
+{% block style%}<link rel="stylesheet" type="text/css" href="/static/styles/profile.css">{% endblock %}
+    {% block content %}
+	<br>
+	<h1>My profile</h1>
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="bg-box p-5">
+					<h2>About Me</h2>
+					<p>Name:</p>
+					<p>My subjects:</p>
+					<br>
+					<p>My available times:</p>
+					<br>
+				</div>
+			</div>
+			<div class="col-md-8">
+				<h2>Available Tutors</h2>
+				<table class="table table-striped table-bordered">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Subject</th>
+							<th>Time</th>
+							<th>Email</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>John Smith</td>
+							<td>Math</td>
+							<td>Monday, 3-5pm</td>
+							<td>john.smith@email.com</td>
+						</tr>
+						<tr>
+							<td>Jane Doe</td>
+							<td>English</td>
+							<td>Wednesday, 1-3pm</td>
+							<td>jane.doe@email.com</td>
+						</tr>
+						<tr>
+							<td>Bob Johnson</td>
+							<td>History</td>
+							<td>Tuesday, 2-4pm</td>
+							<td>bob.johnson@email.com</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+    {% endblock %}
+

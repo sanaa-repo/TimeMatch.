@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up Page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Manfred+Klein&display=swap">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles/style.css">
+</head>
+<body>
+	<div class="container">
+		<img src="../static/images/logo.png" alt="Login Image">
+		<form action="" method="post">
+			<h1>Sign up Page</h1>
+            <label for="user-type">Are you a mentor or a student?</label>
+            <br>
+            <select id="user-type" name="user-type">
+                <option value="mentor">Mentor</option>
+                <option value="student">Student</option>
+            </select>
+            <br>
+			<label for="username">Username:</label>
+			<input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+			<label for="password">Password:</label>
+			<input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+			<input type="submit" value="Login">
+		</form>
+	</div>
+</body>
+</html>
