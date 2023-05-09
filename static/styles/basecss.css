@@ -2,14 +2,19 @@
 	padding-top: 20px;
 	padding-bottom: 20px;
 	height: 80px;
+	background-color: #A84300;
 }
-
 .logo {
 	background-color: white;
 	padding: 10px;
 	border-radius: 50%;
 }
-
+.navbar{
+	background-color: #a84300d1;
+}
+.nav-link{
+	color:white 
+}
 .navbar-nav .nav-link {
 	font-family: 'Manfred Klein', sans-serif;
 	font-weight: lighter;
@@ -18,7 +23,8 @@
 }
 
 .navbar-nav .nav-link:hover {
-	color: white;
+	text-decoration: underline;
+	color:white
 }
 
 .content {

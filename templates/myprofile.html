@@ -10,10 +10,20 @@
 			<div class="col-md-4">
 				<div class="bg-box p-5">
 					<h2>About Me</h2>
-					<p>Name:</p>
+					<p>Name: {{username}}</p>
 					<p>My subjects:</p>
+					<ul>
+						{% for subject in subjectlist %}
+							<li>{{subject}}</li>
+						{% endfor %}
+					</ul>
 					<br>
 					<p>My available times:</p>
+					<ul>
+						{% for time in timelist %}
+							<li>{{time}}</li>
+						{% endfor %}
+					</ul>
 					<br>
 				</div>
 			</div>
@@ -29,24 +39,14 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>John Smith</td>
-							<td>Math</td>
-							<td>Monday, 3-5pm</td>
-							<td>john.smith@email.com</td>
-						</tr>
-						<tr>
-							<td>Jane Doe</td>
-							<td>English</td>
-							<td>Wednesday, 1-3pm</td>
-							<td>jane.doe@email.com</td>
-						</tr>
-						<tr>
-							<td>Bob Johnson</td>
-							<td>History</td>
-							<td>Tuesday, 2-4pm</td>
-							<td>bob.johnson@email.com</td>
-						</tr>
+						{% for user in userlist%}
+							<tr>
+								<td>{{user[0]}}</td>
+								<td>{{user[1]}}</td>
+								<td>{{user[2]}}</td>
+								<td>{{user[3]}}</td>
+							</tr>
+						{% endfor %}
 					</tbody>
 				</table>
 			</div>

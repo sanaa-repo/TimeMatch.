@@ -8,26 +8,32 @@
         <p>instructions</p>
     </div>
     <div class="right">
-        <form>
+        <form name="subject" id="subject" method="POST">
             <div class="form-group">
                 <label for="subject">Add Subject:</label>
                 <input type="text" id="subject" name="subject">
-                <button type="submit">Submit</button>
+                <input type="submit" name="subject_submit" value="Submit">
             </div>
+        </form>
+        <form name="delete-subject" id="delete-subject" method="POST">
             <div class="form-group">
                 <label for="delete-subject">Delete Subject:</label>
                 <input type="text" id="delete-subject" name="delete-subject">
-                <button type="submit">Submit</button>
+                <input type="submit" name="subject_delete_submit" value="Submit">
             </div>
+        </form>
+        <form name="add-time" id="add-time" method="POST">
             <div class="form-group">
                 <label for="add-time">Add Available Time Slot:</label>
                 <input type="text" id="add-time" name="add-time">
-                <button type="submit">Submit</button>
+                <input type="submit" name="time_submit" value="Submit">
             </div>
+        </form>
+        <form name="delete-time" id="delete-time" method="POST">
             <div class="form-group">
                 <label for="delete-time">Delete Available Time Slot:</label>
                 <input type="text" id="delete-time" name="delete-time">
-                <button type="submit">Submit</button>
+                <input type="submit" name="time_delete_submit" value="Submit">
             </div>
         </form>
     </div>

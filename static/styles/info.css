@@ -28,13 +28,17 @@ body {
 .right {
 	flex: 1 1 65%;
 	padding: 100px;
-	background-color: rgba(168, 67, 0, 0.4);
+	background-color: #A84300;
+	border-radius: 5px;
+
 }
 
 h1 {
 	margin-bottom: 20px;
 }
-
+form{
+	border-radius: 5px;
+}
 .form-group {
 	display: flex;
 	align-items: center;

@@ -7,22 +7,8 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
       crossorigin="anonymous">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="basecss.css">
+    <link rel="stylesheet" href="/static/styles/basecss.css">
     {% block style%}{% endblock %}
-    <style>
-      nav {
-        background-color: #A84300;
-        height: 80px;
-      }
-      nav .navbar-nav {
-        margin-left: auto;
-      }
-      nav .nav-link {
-        color: #fff;
-        font-family: "Manfred Klein", sans-serif;
-        font-weight: lighter;
-      }
-    </style>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg">
@@ -32,13 +18,13 @@
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">My Profile</a>
+            <a class="nav-link" href={{url_for("myprofile")}}>My Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Meeting Times</a>
+            <a class="nav-link" href={{url_for("addinfo")}}>Add Information</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Log Out</a>
+            <a class="nav-link" href="{{url_for("logout")}}">Log Out</a>
           </li>
         </ul>
       </div>
