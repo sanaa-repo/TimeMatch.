@@ -1,56 +1,55 @@
 {% extends "base.html" %}
 {% block title%}My Profile{% endblock %}
-{% block style%}<link rel="stylesheet" type="text/css" href="/static/styles/profile.css">{% endblock %}
-    {% block content %}
-	<br>
-	<h1>My profile</h1>
-	<br>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-4">
-				<div class="bg-box p-5">
-					<h2>About Me</h2>
-					<p>Name: {{username}}</p>
-					<p>My subjects:</p>
-					<ul>
-						{% for subject in subjectlist %}
-							<li>{{subject}}</li>
-						{% endfor %}
-					</ul>
-					<br>
-					<p>My available times:</p>
-					<ul>
-						{% for time in timelist %}
-							<li>{{time}}</li>
-						{% endfor %}
-					</ul>
-					<br>
-				</div>
-			</div>
-			<div class="col-md-8">
-				<h2>Available Tutors</h2>
-				<table class="table table-striped table-bordered">
-					<thead>
-						<tr>
-							<th>Name</th>
-							<th>Subject</th>
-							<th>Time</th>
-							<th>Email</th>
-						</tr>
-					</thead>
-					<tbody>
-						{% for user in userlist%}
-							<tr>
-								<td>{{user[0]}}</td>
-								<td>{{user[1]}}</td>
-								<td>{{user[2]}}</td>
-								<td>{{user[3]}}</td>
-							</tr>
-						{% endfor %}
-					</tbody>
-				</table>
+{% block style%}
+<link rel="stylesheet" type="text/css" href="/static/styles/profile.css">{% endblock %}
+{% block content %}
+<br>
+<br>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="bg-box p-5">
+				<h2>My Profile</h2>
+				<p>Name: {{username}}</p>
+				<p>My subjects:</p>
+				<ul>
+					{% for subject in subjectlist %}
+					<li>{{subject}}</li>
+					{% endfor %}
+				</ul>
+				<br>
+				<p>My available times:</p>
+				<ul>
+					{% for time in timelist %}
+					<li>{{time}}</li>
+					{% endfor %}
+				</ul>
+				<br>
 			</div>
 		</div>
+		<div class="col-md-8">
+			<h2>Available Tutors</h2>
+			<table class="table table-striped table-bordered">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Subject</th>
+						<th>Time</th>
+						<th>Email</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for user in userlist%}
+					<tr>
+						<td>{{user[0]}}</td>
+						<td>{{user[1]}}</td>
+						<td>{{user[2]}}</td>
+						<td>{{user[3]}}</td>
+					</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
 	</div>
-    {% endblock %}
-
+</div>
+{% endblock %}

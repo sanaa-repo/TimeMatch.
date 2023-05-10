@@ -1,3 +1,5 @@
+/* This page is for the style of the add Info page, which has a form that is formatted. */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -6,28 +8,27 @@
 
 body {
 	background-color: #FAF9F6;
-	font-family: Arial, sans-serif;
+	font-family: 'Manfred Klein', sans-serif;
+
 }
 
 .container {
 	display: flex;
 	flex-wrap: wrap;
 	margin: 20px;
-    justify-content: space-between
+    justify-content: space-between;
 }
 
 .left {
 	flex: 1 1 30%;
-	padding: 20px;
-    margin-right: 6px;
+	padding: 100px;
 	color: black;
 	border-radius: 5px;
-    text-align: center;
 }
 
 .right {
 	flex: 1 1 65%;
-	padding: 100px;
+	padding: 80px;
 	background-color: #A84300;
 	border-radius: 5px;
 
@@ -42,6 +43,7 @@ form{
 .form-group {
 	display: flex;
 	align-items: center;
+	justify-content: center;
 	margin-bottom: 10px;
 }
 
@@ -70,4 +72,7 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
 	background-color: #893700;
+}
+h1,p{
+	color:white
 }

@@ -8,8 +8,7 @@ from sqlalchemy import ForeignKey, Column, INTEGER, TEXT
 from sqlalchemy.orm import relationship
 from database import Base
 
-# TODO: Complete your models
-
+"User is the username, password, emial and mentor/student status of the person using the website"
 class User(Base):
     __tablename__ = "users"
 
@@ -19,11 +18,10 @@ class User(Base):
     password = Column("password", TEXT, nullable=False)
     email = Column("email", TEXT, nullable=False)
     usertype = Column("usertype", TEXT, nullable=False)
+    # Skill update: using relationships to connect objects/tables
     availabilities = relationship("Availability", back_populates="user")
     subjects = relationship("Subject", secondary = "tutorsubjects", back_populates = "users")
     times = relationship("Time", secondary = "availabilities", back_populates = "users")
-
-    #relationships: None for now. The user is forever alone:)
 
     #constructor
     def __init__(self, username, password, email, usertype):
@@ -36,6 +34,7 @@ class User(Base):
     def __repr__(self):
         return self.username + " is a " + self.usertype + ". Their email is" + self.email
 
+"TutorSubject connects the User with a subject they teach/learn"
 class TutorSubject(Base):
     __tablename__ = "tutorsubjects"
 
@@ -49,7 +48,7 @@ class TutorSubject(Base):
         self.subject_id = subject_id
         self.user_id = user_id
 
-
+"Subject has a name"
 class Subject(Base):
     __tablename__ = "subjects"
 
@@ -65,6 +64,7 @@ class Subject(Base):
     def __repr__(self):
         return self.name
     
+"Availability connects the User with a time they are free"
 class Availability(Base):
     __tablename__ = "availabilities"
 
@@ -80,7 +80,8 @@ class Availability(Base):
         #id autoincrements
         self.user_id = user_id
         self.time_id = time_id
-    
+
+"Time that two people can meet"
 class Time(Base):
     __tablename__ = "times"
 

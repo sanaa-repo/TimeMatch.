@@ -1,3 +1,4 @@
+/* This page is for the style of the Navbar. */
 .navbar {
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -10,11 +11,20 @@
 	border-radius: 50%;
 }
 .navbar{
-	background-color: #a84300d1;
+	background-color: #893700;
 }
 .nav-link{
-	color:white 
+	color:white; 
 }
+
+/*The @media changes the color of the links so when the screen is compressed, 
+one can still see the links against a white background*/
+@media (max-width: 1000px) {
+	.nav-link {
+	  color: black;
+	}
+}
+  
 .navbar-nav .nav-link {
 	font-family: 'Manfred Klein', sans-serif;
 	font-weight: lighter;
@@ -29,4 +39,4 @@
 
 .content {
 	padding: 20px;
-}
+}  

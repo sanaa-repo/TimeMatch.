@@ -1,12 +1,16 @@
+/* This page is for the style of the my profile page. */
+
 body {
 	background-color: #FAF9F6;
-	font-family: 'Delius', sans-serif;
+	font-family: 'Manfred Klein', sans-serif;
 }
 
 .bg-box {
-	background-color: rgba(168, 67, 0, 0.4);
+	font-family: 'Manfred Klein', sans-serif;
+	background-color: rgba(168, 67, 0, 0.942);
 	padding: 30px;
-	border-radius: 0;
+	border-radius: 5px;
+	color: white;
 }
 
 table {

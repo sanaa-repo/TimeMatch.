@@ -6,8 +6,9 @@ app = Flask(__name__)
 
 app.secret_key = "tZ350KsDn78"
 
-# TODO: add comments
+# Skill update: functional with basics of python/effectively commit database changes
 
+#Allows user to log in to website if they have an account
 @app.route("/", methods = ["GET", "POST"])
 def login():
     if request.method == "GET":
@@ -43,7 +44,8 @@ def signup():
             flash("Username already exists. Please create another one", "error")
             return redirect(url_for("signup"))
 
-#
+#returns a list of strings that have the following information(username, subject taught, time, email) 
+# depending on own designation to be paired with based on available time and subject
 def match():
     myUser = db_session.query(User).where(User.username == session["username"]).first()
     finalList = []
@@ -103,6 +105,7 @@ def addinfo():
             subject = request.form["delete-subject"] 
             subjectDeleteID = db_session.query(Subject.id).where(Subject.name == subject).first()[0]
             myUserID = db_session.query(User.id).where(User.username == session["username"]).first()[0]
+            #Error message if subject doesn't exist for the user
             if subjectDeleteID is None:
                 flash("This subject was not added", "info")
                 return redirect(url_for("addinfo"))
@@ -126,11 +129,12 @@ def addinfo():
             return redirect(url_for("myprofile"))
         elif "time_delete_submit" in request.form:
             timeString = request.form["delete-time"]
-            timelist = timeString.split(" ")
+            timelist = timeString.split(" ") #Time to delete comes in as string that needs to be split
             day_of_week = timelist[0]
             time = timelist[1]
             myUserID = db_session.query(User.id).where(User.username == session["username"]).first()[0]
             timeDeleteID = db_session.query(Time.id).where((Time.day_of_week == day_of_week) & (Time.time == time)).first()[0]
+            #error message if time does not exist for this user
             if timeDeleteID is None:
                 flash("This time was not added", "info")
                 return redirect(url_for("addinfo"))
@@ -139,7 +143,7 @@ def addinfo():
             db_session.commit()
             return redirect(url_for("myprofile"))
 
-
+#Allows user to log out of website
 @app.route("/logout")
 def logout():
     if "username" in session:

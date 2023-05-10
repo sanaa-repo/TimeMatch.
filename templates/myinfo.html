@@ -2,13 +2,15 @@
 {% block title%}Add Information{% endblock %}
 {% block style%}<link rel="stylesheet" type="text/css" href="/static/styles/info.css">{% endblock %}
 {% block content %}
+<br><br><br><br>
 <div class="container">
     <div class="left">
-        <h1>Meeting Times</h1>
-        <p>instructions</p>
     </div>
     <div class="right">
+        
         <form name="subject" id="subject" method="POST">
+            <h1>Add Tutoring Information</h1>
+            <p> Enter Time information in the format of Day space Time. Ex. Monday 9</p>
             <div class="form-group">
                 <label for="subject">Add Subject:</label>
                 <input type="text" id="subject" name="subject">
